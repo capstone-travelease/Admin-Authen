@@ -1,10 +1,10 @@
 version: "3.3"
 services:
   login:
-    container_name: auth-partner
-    image: ngoctienwork2002/auth-partner
+    container_name: admin-authen
+    image: coderbillzay/admin-authen
     ports:
-      - '2190:2910'
+      - '2910:2910'
     volumes:
       - ./:/server
     restart: always

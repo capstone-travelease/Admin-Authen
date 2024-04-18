@@ -29,6 +29,7 @@ public class AuthController {
 
     @PostMapping(path = "/login")
     public ResponseStatusDTO signIn(@RequestBody @Valid LoginRequestDTO request, HttpServletResponse response) {
+        System.out.println(request);
         HashMap<String,Object> userData = new HashMap<>();
         var isCheckResponse = authService.Login(request);
         if(isCheckResponse == null){
